@@ -1,0 +1,136 @@
+/* imposta sfondo e font */
+html {
+  background-color: whitesmoke;
+  font-family: sans-serif;
+}
+
+/* allinea il titolo al centro */
+h1 {
+  text-align: center;
+}
+
+/* questo non so cosa serve... */
+input, button {
+  margin: 0;
+  padding: 0;
+  border: none;
+  background: none;
+  font: inherit;
+  color: inherit;
+  outline: none;
+  box-sizing: border-box;
+}
+
+/* di base, tutti i bottoni hanno questo aspetto. 
+Poi si può sempre aggiungere roba */
+button {
+  border: 1px solid black;
+  padding: 1rem;
+  border-radius: 1rem;
+}
+
+/* il + è più grande */
+#add-btn, #rmv-btn {
+    font-size: large;
+}
+
+/* input and add button */
+/* metti l'input box e il pulsante in un flexbox */
+#add-box {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+/* aspetto della casella di testo */
+#task-input {
+  width: 100%;
+  border: 1px solid black;
+  padding: 1rem;
+  border-radius: 1rem;
+}
+
+/* quando scrivo nella casella, mostra questo aspetto */
+input:focus {
+  background-color: #B8DE6A;
+}
+
+/* view list mode toggle container*/
+/* metti i due pulsanti di view e list in un box */
+#view-box {
+  display: flex;
+  gap: 1rem;
+}
+
+/* aspetto aggiuntivo dei pulsanti list view e card view */
+.toggle-btn {
+  background-color: #81896F;
+  width: 50%;
+}
+
+
+/* To-do list */
+
+/* imposta l'aspetto dell'elemento della lista */
+li {
+  display: block;
+  width: 100%;
+}
+
+/* quando in html c'è scritto card-view, 
+adottiamo questo aspetto */
+
+/* imposta l'aspetto della lista intera in card view*/
+.card-view {
+  display: flex;
+  /*flex-wrap: wrap;*/
+  justify-content: flex-start;
+  padding-left: 0;
+}
+
+/* imposta l'aspetto dell'elemento della 
+lista in card view */
+.card-view li {
+  background-color: #B8DE6A;
+  height: 3rem;
+  border: 1px solid black;
+  border-radius: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+/* quando in html c'è scritto list-view, 
+adottiamo questo aspetto */
+
+/* imposta l'aspetto della lista intera in list-view*/
+.list-view {
+  border: 1px solid black;
+  border-radius: 1rem;
+  padding: 1rem 1rem 1rem 2rem;
+  background-color: #B8DE6A;
+  list-style: disc;
+}
+
+/* imposta l'aspetto dell'elemento della 
+lista in lsit view */
+.list-view li {
+  height: 2rem;
+  display: list-item;
+}
+
+
+/* comportamento dei pulsanti */
+
+button:hover {
+  cursor: pointer;
+}
+
+.toggle-btn:hover{
+    color: white;
+}
+
+#add-btn:hover, #rmv-btn:hover {
+    color: #B8DE6A;
+}

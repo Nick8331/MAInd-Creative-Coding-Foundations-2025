@@ -8,9 +8,28 @@
     <title>To-do list</title>
 </head>
 <body>
-    <div id="prova">
-        <h1>bla bla</h1>
-        <h1>bli bli</h1>
-    </div>
+    <header>
+        <h1>To-do list</h1>
+        <!-- input and add button -->
+        <div id="add-box">
+            <input type="text" id="task-input" placeholder="Add new task...">
+            <button id="add-btn">+</button>
+        </div>
+
+        <!-- view list mode toggle -->
+        <div id="view-box">
+            <button id="list-view-btn" class="toggle-btn">List view</button>
+            <button id="card-view-btn" class="toggle-btn">Card view</button>
+        </div>
+    </header>
+
+    <main>
+        <!-- to-do list -->
+        <ul id="task-list-container" class="card-view">
+            <li>Prova</li>
+            <button id="rmv-btn">-</button>
+            <li>Prova</li>
+        </ul>
+    </main>
 </body>
 </html>
