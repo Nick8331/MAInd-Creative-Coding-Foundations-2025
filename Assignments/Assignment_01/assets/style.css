@@ -30,13 +30,15 @@ button {
 }
 
 /* il + è più grande */
-#add-btn, #rmv-btn {
+#add-btn {
     font-size: large;
+    width: 60px;
 }
 
 /* input and add button */
-/* metti l'input box e il pulsante in un flexbox */
-#add-box {
+/* metti l'input box e il pulsante in un flexbox,
+metti i due pulsanti di view e list in un box */
+#add-box, #view-box {
   display: flex;
   gap: 1rem;
   margin-bottom: 1rem;
@@ -55,23 +57,21 @@ input:focus {
   background-color: #B8DE6A;
 }
 
-/* view list mode toggle container*/
-/* metti i due pulsanti di view e list in un box */
-#view-box {
-  display: flex;
-  gap: 1rem;
-}
-
 /* aspetto aggiuntivo dei pulsanti list view e card view */
 .toggle-btn {
   background-color: #81896F;
   width: 50%;
 }
 
+#rmv-box button {
+  width: 100%;
+  padding: .1rem;
+  margin-bottom: 1rem;
+  font-size: medium;
+}
 
 /* To-do list */
 
-/* imposta l'aspetto dell'elemento della lista */
 li {
   display: block;
   width: 100%;
@@ -83,8 +83,7 @@ adottiamo questo aspetto */
 /* imposta l'aspetto della lista intera in card view*/
 .card-view {
   display: flex;
-  /*flex-wrap: wrap;*/
-  justify-content: flex-start;
+  flex-wrap: wrap;
   padding-left: 0;
 }
 
@@ -100,6 +99,8 @@ lista in card view */
   align-items: center;
   margin-bottom: 1rem;
 }
+
+
 
 /* quando in html c'è scritto list-view, 
 adottiamo questo aspetto */
@@ -127,10 +128,17 @@ button:hover {
   cursor: pointer;
 }
 
+
 .toggle-btn:hover{
     color: white;
 }
 
-#add-btn:hover, #rmv-btn:hover {
-    color: #B8DE6A;
+#add-btn:hover {
+    background-color: #B8DE6A;
+    color: white;
+}
+
+#rmv-btn:hover {
+  background-color: red;
+  color: white;
 }
