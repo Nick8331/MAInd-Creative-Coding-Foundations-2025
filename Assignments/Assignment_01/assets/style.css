@@ -35,6 +35,14 @@ button {
     width: 60px;
 }
 
+#color-id {
+  width: 60px;
+  height: 60px;
+  border: 1px solid black;
+  padding: 1rem;
+  border-radius: 1rem;
+}
+
 /* input and add button */
 /* metti l'input box e il pulsante in un flexbox,
 metti i due pulsanti di view e list in un box */
@@ -55,6 +63,10 @@ metti i due pulsanti di view e list in un box */
 /* quando scrivo nella casella, mostra questo aspetto */
 input:focus {
   background-color: #B8DE6A;
+}
+
+#color-id:focus {
+  background-color: gray;
 }
 
 /* aspetto aggiuntivo dei pulsanti list view e card view */
@@ -107,10 +119,7 @@ adottiamo questo aspetto */
 
 /* imposta l'aspetto della lista intera in list-view*/
 .list-view {
-  border: 1px solid black;
-  border-radius: 1rem;
   padding: 1rem 1rem 1rem 2rem;
-  background-color: #B8DE6A;
   list-style: disc;
 }
 
@@ -127,7 +136,6 @@ lista in lsit view */
 button:hover {
   cursor: pointer;
 }
-
 
 .toggle-btn:hover{
     color: white;
