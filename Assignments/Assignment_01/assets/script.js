@@ -5,6 +5,7 @@ const addButton = document.getElementById('add-btn');
 const listButton = document.getElementById('list-view-btn');
 const removeButton = document.getElementById('rmv-btn')
 const cardButton = document.getElementById('card-view-btn');
+const updateList = document.getElementById('update-list');
 // elements
 const colorWheel = document.getElementById('color-id')
 const taskInput = document.getElementById('task-input');
@@ -44,10 +45,15 @@ addButton.addEventListener('click',() => {
     listElement.innerHTML = inputValue;
     // inserisce l'attributo CSS inline in riferimento al colore'
     listElement.setAttribute('style', 'background-color:' + colorValue + ';')
-    console.log(listElement)
+    // console.log(listElement)
     // piazza il list element, che ora contiente il testo, nel HTML
     taskList.appendChild(listElement);
     // resetta la variabile
     taskInput.value = '';
 });
 
+updateList.addEventListener('click', () => {
+    const list = document.querySelector('ul');
+    const lastItem = list.lastElementChild;
+    console.log(lastItem)
+})
