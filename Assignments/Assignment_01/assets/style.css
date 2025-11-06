@@ -58,15 +58,11 @@ metti i due pulsanti di view e list in un box */
   border: 1px solid black;
   padding: 1rem;
   border-radius: 1rem;
-}
-
-/* quando scrivo nella casella, mostra questo aspetto */
-input:focus {
   background-color: #B8DE6A;
 }
 
 #color-id:focus {
-  background-color: gray;
+  background-color: #81896F;
 }
 
 /* aspetto aggiuntivo dei pulsanti list view e card view */
@@ -77,7 +73,7 @@ input:focus {
 
 #rmv-box button {
   width: 100%;
-  padding: .1rem;
+  padding: .2rem;
   margin-bottom: 1rem;
   font-size: medium;
 }
@@ -88,6 +84,8 @@ li {
   display: block;
   width: 100%;
 }
+
+
 
 /* quando in html c'è scritto card-view, 
 adottiamo questo aspetto */
@@ -104,7 +102,7 @@ lista in card view */
 .card-view li {
   background-color: #B8DE6A;
   height: 3rem;
-  border: 1px solid black;
+  border: 2px solid black;
   border-radius: 1rem;
   display: flex;
   justify-content: center;
@@ -126,8 +124,11 @@ adottiamo questo aspetto */
 /* imposta l'aspetto dell'elemento della 
 lista in lsit view */
 .list-view li {
-  height: 2rem;
+  height: 1rem;
   display: list-item;
+  padding: .2rem;
+  margin: .5rem;
+  border-radius: .1rem;
 }
 
 
@@ -142,11 +143,11 @@ button:hover {
 }
 
 #add-btn:hover {
-    background-color: #B8DE6A;
+    background-color: #81896F;
     color: white;
 }
 
 #rmv-btn:hover {
-  background-color: red;
+  background-color: #ba2116;
   color: white;
 }

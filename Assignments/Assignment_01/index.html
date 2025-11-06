@@ -5,11 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="assets/style.css">
     <script src="assets/script.js" defer></script>
-    <title>To-do list</title>
+    <title>My Tasks</title>
 </head>
 <body>
     <header>
-        <h1>To-do list</h1>
+        <h1>Task List</h1>
         <!-- input and add button -->
         <div id="add-box">
             <input type="text" id="task-input" placeholder="Add new task...">
@@ -23,17 +23,16 @@
             <button id="card-view-btn" class="toggle-btn">Card view</button>
         </div>
         <div id="rmv-box">
-            <button id="rmv-btn">Rimuovi l'ultimo task</button>
+            <button id="rmv-btn">Delete last task entered</button>
         </div>
     </header>
 
     <main>
         <!-- to-do list -->
-        <ul id="task-list-container" class="list-view">
-
+        <ul id="task-list-container" class="card-view">
+            
         </ul>
-<button id="update-list">update list</button>
-
+<!-- <button id="debug-button">debug button</button> -->
     </main>
 </body>
 </html>
