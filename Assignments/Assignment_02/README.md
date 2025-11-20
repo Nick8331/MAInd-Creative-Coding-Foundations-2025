@@ -15,7 +15,7 @@ Choose a “mini-game” to rebuild with HTML, CSS and JavaScript. The requireme
 
 ![gameplay wide](DOC/Screenshot1.jpg)
 ![gameplay responsive](DOC/Screenshot2.jpg)
-![game over pop-up](DOC/Screenshot2.jpg)
+![game over pop-up](DOC/Screenshot3.jpg)
 
 # Space Shooter Game
 
