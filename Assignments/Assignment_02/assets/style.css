@@ -1,0 +1,140 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+html,
+body {
+  margin: 0;
+  font-family: Arial;
+  background: #151515;
+  color: #e6e6ef;
+}
+
+.popup {
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 100vh;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 100;
+}
+
+.title {
+  font-weight: 700;
+  letter-spacing: 0.6px;
+  color: #e6e6ef;
+  font-size: 50px;
+}
+
+#gameArea {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+  display: block;
+  background-color: #151515;
+  background-size: cover;
+  pointer-events: none;
+}
+
+#player {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 18px;
+  user-select: none;
+}
+
+#player img {
+  width: 100px;
+}
+
+.bullet {
+  position: absolute;
+  width: 6px;
+  height: 12px;
+  background: linear-gradient(180deg, #ffffff, #ffd27a);
+  border-radius: 3px;
+  transform: translate(-50%, -50%);
+  box-shadow: 0 4px 16px rgba(255, 210, 120, 0.18);
+}
+
+.enemy {
+  position: absolute;
+}
+.enemy img {
+  width: 60px;
+}
+
+.explosion {
+  position: absolute;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: radial-gradient(circle, #ffffff 0%, #ffd27a 30%, transparent 60%);
+  pointer-events: none;
+  opacity: 0.95;
+  filter: blur(2px);
+}
+
+#scoreBox {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #e6e6ef;
+  font-weight: 600;
+  gap: 12px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: #535355;
+  bottom: 0px;
+  height: 50px;
+  width: 150px;
+  font-size: 20px;
+  text-transform: uppercase;
+  border-bottom-left-radius: 10px;
+}
+
+
+#missedBox {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #000000;
+  font-weight: 600;
+  gap: 12px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #ef7171;
+  bottom: 0px;
+  height: 50px;
+  width: 250px;
+  font-size: 20px;
+  text-transform: uppercase;
+  border-bottom-right-radius: 10px;
+}
+
+#scoreBox span#score {
+  color: #e6e6ef;
+  font-weight: 800;
+  font-size: 20px;
+}
+
+.controls {
+  position: absolute;
+  left: 10px;
+  top: 10px;
+  font-size: 12px;
+  color: #b9b9c9;
+  background: rgba(0, 0, 0, 0.18);
+  padding: 6px 10px;
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.02);
+}
