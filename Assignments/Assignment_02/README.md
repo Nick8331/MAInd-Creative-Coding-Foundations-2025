@@ -17,6 +17,10 @@ Choose a “mini-game” to rebuild with HTML, CSS and JavaScript. The requireme
 ![gameplay responsive](DOC/Screenshot2.jpg)
 ![game over pop-up](DOC/Screenshot3.jpg)
 
+## Block Diagram
+
+![block diagramm](DOC/Assignment02_blockDiagram.svg)
+
 # Space Shooter Game
 
 This is the simple game web based developed using **HTML, CSS, and JavaScript** in which plane can shoot enemies.
