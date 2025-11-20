@@ -13,9 +13,9 @@ Choose a “mini-game” to rebuild with HTML, CSS and JavaScript. The requireme
 
 ## Screenshots
 
-![screenshot1](DOC/screenshot1.jpg)
-![screenshot2](DOC/screenshot2.jpg)
-![screenshot3](DOC/screenshot2.jpg)
+![gameplay wide](DOC/Screenshot1.jpg)
+![gameplay responsive](DOC/Screenshot2.jpg)
+![game over pop-up](DOC/Screenshot2.jpg)
 
 # Space Shooter Game
 
