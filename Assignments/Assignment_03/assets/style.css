@@ -3,6 +3,7 @@
   padding: 0px;
   box-sizing: border-box;
 }
+
 html,
 body {
   margin: 0;
@@ -43,10 +44,10 @@ body {
 }
 
 #player {
-  position: absolute;
+  position: absolute; /* to parent gameArea */
   left: 50%;
-  transform: translateX(-50%);
   bottom: 18px;
+  transform: translateX(-50%);
   user-select: none;
 }
 
@@ -67,6 +68,7 @@ body {
 .enemy {
   position: absolute;
 }
+
 .enemy img {
   width: 60px;
 }
@@ -92,8 +94,8 @@ body {
   position: absolute;
   top: 0;
   right: 0;
-  background-color: #535355;
   bottom: 0px;
+  background-color: #535355;
   height: 50px;
   width: 150px;
   font-size: 20px;
@@ -112,8 +114,8 @@ body {
   position: absolute;
   top: 0;
   left: 0;
-  background-color: #ef7171;
   bottom: 0px;
+  background-color: #ef7171;
   height: 50px;
   width: 250px;
   font-size: 20px;
@@ -121,7 +123,7 @@ body {
   border-bottom-right-radius: 10px;
 }
 
-#scoreBox span#score {
+#scoreBox #score {
   color: #e6e6ef;
   font-weight: 800;
   font-size: 20px;

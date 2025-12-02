@@ -211,6 +211,7 @@ function gameLoop() {
   requestAnimationFrame(gameLoop);
 }
 
+// Mostra pop up per due secondi quando il DOM è caricato
 document.addEventListener("DOMContentLoaded", () => {
   setTimeout(() => {
     const popup = document.querySelector(".popup");

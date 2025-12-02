@@ -19,10 +19,22 @@ let bullets = [];
 let enemies = [];
 let enemySpeed = enemyInitialSpeed;
 
+// dog images via API (fallback keeps a local sprite if network fails)
+const dogApiUrl = "https://dog.ceo/api/breeds/image/random";
+const fallbackDogPic = "assets/image/enemy1.png";
 
-// foto dei nemici
-const enemyPics = [ "assets/image/enemy1.png", "assets/image/enemy2.png", "assets/image/ufo.png"];
-
+async function fetchDogImage() {
+  try {
+    const response = await fetch(dogApiUrl, { cache: "no-store" });
+    const data = await response.json();
+    if (data && data.status === "success" && data.message) {
+      return data.message;
+    }
+  } catch (error) {
+    console.error("Dog image fetch failed, using fallback.", error);
+  }
+  return fallbackDogPic;
+}
 
 document.addEventListener("keydown", (keyboardEvent) => {
   if (keyboardEvent.key === "ArrowLeft") targetPlayerX -= playerMovementLeft;
@@ -78,9 +90,11 @@ function spawnEnemy() {
   const enemyDiv = document.createElement("div");
   enemyDiv.classList.add("enemy"); // <div class="enemy"></div>
 
-  // select randomly an image from the image array
-  const SelectedEnemyPic = enemyPics[Math.floor(Math.random() * 3)];
-  enemyDiv.innerHTML = `<img src="${SelectedEnemyPic}" alt="enemy">`; // <div class="enemy"><img src="ufo.png" alt="enemy"></div>
+  // create image node so we can update it once the API returns
+  const enemyImg = document.createElement("img");
+  enemyImg.alt = "enemy";
+  enemyImg.src = fallbackDogPic;
+  enemyDiv.appendChild(enemyImg);
 
   // Posizione di partenza dell'enemy
   enemyDiv.style.left = Math.random() * (gameArea.clientWidth - 50) + "px";
@@ -89,6 +103,15 @@ function spawnEnemy() {
 
   gameArea.appendChild(enemyDiv);
   enemies.push(enemyDiv);
+
+  // fetch a dog picture and swap it in when ready
+  fetchDogImage()
+    .then((url) => {
+      enemyImg.src = url || fallbackDogPic;
+    })
+    .catch(() => {
+      enemyImg.src = fallbackDogPic;
+    });
 }
 
 function createExplosion(horizantal, vertical) {
@@ -211,6 +234,7 @@ function gameLoop() {
   requestAnimationFrame(gameLoop);
 }
 
+// Mostra pop up per due secondi quando il DOM è caricato
 document.addEventListener("DOMContentLoaded", () => {
   setTimeout(() => {
     const popup = document.querySelector(".popup");
