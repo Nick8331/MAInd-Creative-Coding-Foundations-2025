@@ -7,7 +7,7 @@ const playerMovementLeft = 35;
 const playerMovementRight = 35;
 const bulletSpeed = 5; // pixel/frame
 const enemyInitialSpeed = 0.5;
-const enemySpwanProbability = 0.008; // the higher the more probable
+const enemySpwanProbability = 0.009; // the higher the more probable
 
 let score = 0;
 // contatore degli errori

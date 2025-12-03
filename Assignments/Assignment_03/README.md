@@ -2,40 +2,37 @@
 
 # Brief
 
-Choose a “mini-game” to rebuild with HTML, CSS and JavaScript. The requirements are:
+Upgrade the **Assignment 02** by adding the use of data coming from an external web API. For example, fetch contents (audio, images, video, text, metadata) from online archives, AI generated contents (chatGPT API), data (weather, realtime traffic data, environmental data).
 
-- The webpage should be responsive
-- Choose an avatar at the beginning of the game
-- Keep track of the score of the player
-- Use the keyboard to control the game (indicate what are the controls in the page). You can also use buttons (mouse), but also keyboard.
-- Use some multimedia files (audio, video, …)
-- Implement an “automatic restart” in the game (that is not done via the refresh of the page)
+The application **must** have those requirements:
+
+- The webpage is responsive
+- Use a web API (you choose which one best fists for your project) to load the data and display them in the webpage
+- At least one multimedia file (for user feedback interactions, or content itself)
 
 ## Screenshots
 
-![gameplay wide](DOC/Screenshot1.jpg)
-![gameplay responsive](DOC/Screenshot2.jpg)
-![game over pop-up](DOC/Screenshot3.jpg)
+![gameplay wide](DOC/Screenshot_1.jpg)
 
 ## Block Diagram
 
 ![block diagramm](DOC/Assignment02_blockDiagram.svg)
 
-# Space Shooter Game
+# Who's a Good Boy Game
 
-This is the simple game web based developed using **HTML, CSS, and JavaScript** in which plane can shoot enemies.
+I modified the Space Shooter game made for assignment 2 into a game in which you try to leash as many dogs as you can.
 
 ## How to play
 
-- Spaceship can move easily left or right but using left and right **keyboard Arrow**
-- Spaceship can shoot bullets using **spacebar**.
+- Leash can move easily left or right but using left and right **keyboard Arrow**
+- Leash can shoot bullets using **spacebar**.
 - Difficulty can be raised by pressing **+ key**.
-- There are **three enemy types** (enemy plane 1, enemy plane 2 and UFO).
-- There is **Explosion effect** and for this I used the boxshadow feature in css
+- Dog pictures are fetched from **https://dog.ceo/dog-api/**. They are all random.
+- There is **Explosion effect** when dog pictures are hit
 
 ## Description
 
-The ship moves horizontally at the bottom of the *#gameArea*, shoots bullets upward, and tries to destroy falling enemies before they pass the bottom border. The player's target position is updated with left/right arrow keys and the actual *playerX* smoothly interpolates toward this target (*smoothPlayer*) while being clamped within the game area. Pressing space creates a *.bullet* div at the player's current poisition and pushes it into a *bullets* array; each frame, the game loop moves bullets upward and removes them when they leave the upper border. Enemies are randomly spawned at the top with a random X position and a randomly chosen image, stored in *enemies* array, and then moved downward each frame at *enemySpeed*, which can be increased with the + key. If an enemy's bottom passes the fame area height, it is counted as "missed", removed, and then the missed counter in updated; reaching *maxMissed* triggers the game over and the game fully resets.
+The leash moves horizontally at the bottom of the *#gameArea*, shoots bullets upward, and tries to catch the dogs before they pass the bottom border. The player's target position is updated with left/right arrow keys and the actual *playerX* smoothly interpolates toward this target (*smoothPlayer*) while being clamped within the game area. Pressing space creates a *.bullet* div at the player's current poisition and pushes it into a *bullets* array; each frame, the game loop moves bullets upward and removes them when they leave the upper border. Enemies are randomly spawned at the top with a random X position and a randomly chosen image from the *dog API* and then moved downward each frame at *enemySpeed*, which can be increased with the + key. If an enemy's bottom passes the fame area height, it is counted as "missed", removed, and then the missed counter in updated; reaching *maxMissed* triggers the game over and the game fully resets.
 Bullet enemy collisions are detected every frame via rectanle intersection (*getBoundingClientRect*); on hit, an esplosion effect is created, both elements are removed and the score is incremented.
 **The continuos ***requestAnimationFram(gameLoop)*** is responsible for the entire game cycle.**
 
