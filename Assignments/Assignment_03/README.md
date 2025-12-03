@@ -1,4 +1,4 @@
-# Assignment 01
+# Assignment 03
 
 # Brief
 
@@ -12,7 +12,7 @@ The application **must** have those requirements:
 
 ## Screenshots
 
-![gameplay wide](DOC/Screenshot_1.jpg)
+![gameplay wide](DOC/Screenshot_1.png)
 
 ## Block Diagram
 
